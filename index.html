@@ -32,7 +32,7 @@
 	<section class="upper-section relative overflow-hidden bg-[#f6f8fa]">
 		<!-- Background circle -->
 		<div
-			class="absolute top-0 right-0 xl:w-[950px] xl:h-[950px] xl:-translate-y-[350px] xl:translate-x-[350px] bg-blue-500 rounded-full opacity-20">
+			class="absolute top-0 right-0 w-[600px] h-[600px] -translate-y-[235px] translate-x-[235px] md:w-[720px] md:h-[720px] md:-translate-y-[300px] md:translate-x-[300px] xl:w-[950px] xl:h-[950px] xl:-translate-y-[350px] xl:translate-x-[350px] bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20">
 		</div>
 		<!-- Navbar -->
 		<div
@@ -88,7 +88,7 @@
 		</div>
 
 		<section
-			class="relative container mx-auto max-w-[400px] md:max-w-[750px] xl:max-w-[1200px]  px-4 min-[1200px]:px-32 mb-24 z-10">
+			class="relative container mx-auto max-w-[400px] md:max-w-[750px] xl:max-w-[1200px]  px-4 min-[1200px]:px-32 mb-24 z-10 md:pt-16">
 
 			<!-- Intro section -->
 			<div
@@ -97,10 +97,13 @@
 					<div class="text-base font-serif text-gray-400 mt-12 tracking-tighter">HELLO, MY
 						NAME IS</div>
 					<div class="my-16 flex flex-col">
-						<div class="text-5xl md:text-6xl font-playfair font-medium">Md. Nazmul
+						<div class="text-4xl md:text-5xl font-playfair font-bold">
+							Md. Nazmul
 							Sakib
 						</div>
-						<div class="text-3xl font-[fantasy] font-medium text-gray-400 mt-8">Web
+						<div
+							class="text-xl md:text-3xl font-serif font-bold  text-gray-500 mt-8">
+							Web
 							Developer
 						</div>
 					</div>
@@ -118,20 +121,22 @@
 						class="w-[90%] md:w-[350px] md:h-[350px] xl:w-[450px] xl:h-[450px] aspect-square object-cover  rounded-full border-4 border-gray-500 mt-16">
 				</div>
 			</div>
+
+
 			<!-- About Section -->
 			<div class="about-section mt-32">
 				<div class="text-base text-blue-500 font-semibold">About me</div>
 				<div
-					class="font-serif text-4xl md:text-5xl font-stretch-ultra-condensed tracking-tighter font-semibold  mt-12">
+					class="font-serif text-4xl md:text-5xl font-stretch-ultra-condensed tracking-tighter font-semibold  mt-10 scale-y-[120%]">
 					I am an enthusiastic web developer based in New York, with a rich experience of
 					over 6
 					years in website & product design.
 				</div>
 				<div class="flex flex-col md:flex-row mt-16">
 					<div
-						class="flex-1 font-serif text-3xl md:text-4xl font-stretch-ultra-condensed tracking-tighter font-semibold text-blue-500 mb-8">
+						class="basis-1/2 md:pe-32 lg:pe-16 font-serif text-xl md:text-3xl lg:text-3xl font-stretch-ultra-condensed tracking-tighter font-semibold text-[#009adf] mb-8">
 						I design professional & beautiful websites</div>
-					<div class="flex-1 flex flex-col gap-4">
+					<div class="basis-1/2  flex flex-col gap-4">
 						<div class="text-black tracking-tighter">With years of experience in
 							graphic and
 							web design I
@@ -159,10 +164,12 @@
 					</div>
 				</div>
 			</div>
+
+
 			<!-- What I do section -->
 			<div class="what_I_do ">
 				<div
-					class="font-serif text-4xl md:text-5xl font-stretch-ultra-condensed tracking-tighter font-semibold my-12 text-center sm:text-left">
+					class="font-serif text-4xl md:text-5xl lg:text-4xl font-stretch-ultra-condensed tracking-tighter font-semibold my-12 text-center sm:text-left">
 					What I do</div>
 				<div class="flex mt-12 flex-col md:flex-row">
 					<div class="flex-1 tracking-tighter text-gray-500 text-center sm:text-left">From
@@ -229,7 +236,7 @@
 			<section class="skill-and-experience flex flex-col md:flex-row pt-32 ">
 				<div class="skills basis-1/2 sm:pe-16">
 					<div
-						class="header font-serif text-4xl md:text-5xl font-stretch-ultra-condensed tracking-tighter font-semibold my-12">
+						class="header font-serif text-4xl md:text-5xl  lg:text-4xl font-stretch-ultra-condensed tracking-tighter font-semibold my-12">
 						Skills</div>
 					<div class="flex flex-col gap-8">
 						<div class="w-full max-w-md">
@@ -282,10 +289,12 @@
 						</div>
 					</div>
 				</div>
+
+
 				<!-- Showing the work Experience -->
 				<div class="experience basis-1/2">
 					<div
-						class="header font-serif text-4xl md:text-5xl font-stretch-ultra-condensed tracking-tighter font-semibold my-12">
+						class="header font-serif text-4xl md:text-5xl  lg:text-4xl  font-stretch-ultra-condensed tracking-tighter font-semibold my-12">
 						My Experience</div>
 					<!-- Experience Listing -->
 					<div class="flex flex-col gap-12">
@@ -368,7 +377,7 @@
 			<section class="protfolio py-32">
 				<div class="header flex justify-between">
 					<div
-						class="font-serif text-4xl md:text-5xl font-stretch-ultra-condensed tracking-tighter font-semibold my-12">
+						class="font-serif text-4xl md:text-5xl  lg:text-4xl font-stretch-ultra-condensed tracking-tighter font-semibold my-12">
 						Portfolio</div>
 					<button class="text-6xl text-[#009bdf]"><i
 							class="bi bi-arrow-right"></i></button>
@@ -401,7 +410,7 @@
 					</div>
 				</div>
 				<div class="right-side">
-					<div class="flex gap-4 lg:gap-16 flex-col lg:flex-row">
+					<div class="flex gap-4 lg:gap-16 flex-col lg:flex-row sm:pe-24 lg:pe-0">
 						<div class="flex flex-col">
 							<div
 								class="font-serif text-lg md:text-xl font-stretch-ultra-condensed tracking-tighter font-semibold">
