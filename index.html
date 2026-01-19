@@ -28,17 +28,22 @@
 	</script>
 </head>
 
-<body class="bg-[url('/images/bg_img.jpeg')] bg-cover bg-fixed">
+<body class="bg-[url('/images/bg_img.jpeg')] bg-cover bg-fixed  ">
 	<section class="upper-section relative overflow-hidden bg-[#f6f8fa]">
 		<!-- Background circle -->
 		<div
-			class="absolute top-0 right-0 w-[950px] h-[950px] -translate-y-[350px] translate-x-[350px] bg-blue-500 rounded-full opacity-20">
+			class="absolute top-0 right-0 xl:w-[950px] xl:h-[950px] xl:-translate-y-[350px] xl:translate-x-[350px] bg-blue-500 rounded-full opacity-20">
 		</div>
 		<!-- Navbar -->
-		<div class="navbar flex justify-between  container mx-auto max-w-[1200px]  min-[1200px]:px-32">
-			<div class="branding text-3xl font-serif font-bold tracking-tighter py-4">M.N.Sakib
+		<div
+			class="navbar hidden  xl:flex flex flex-col lg:flex-row lg:justify-between  container mx-auto max-w-[400px] md:max-w-[750px] xl:max-w-[1200px]  px-4 min-[1200px]:px-32 ">
+			<div class="flex justify-between">
+				<div class="branding text-3xl font-serif font-bold tracking-tighter py-4">M.N.Sakib
+				</div>
+				<div class="lg:hidden py-4"><i class="bi bi-list"></i></div>
 			</div>
-			<div class="flex gap-4 tracking-tighter">
+			<!-- Navbar Items -->
+			<div class="flex lg:gap-4 tracking-tighter flex-col lg:flex-row">
 				<div class="relative group">
 					<span
 						class="absolute top-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
@@ -82,12 +87,13 @@
 			</div>
 		</div>
 
-		<section class="relative container mx-auto max-w-[1200px]  min-[1200px]:px-32 mb-24 z-10">
+		<section
+			class="relative container mx-auto max-w-[400px] md:max-w-[750px] xl:max-w-[1200px]  px-4 min-[1200px]:px-32 mb-24 z-10">
 
 			<!-- Intro section -->
 			<div
 				class="relative z-10 section-intro flex flex-col-reverse md:flex-row  justify-center  mt-8">
-				<div class="section-intro-details flex flex-col ">
+				<div class="section-intro-details flex flex-col basis-1/2">
 					<div class="text-base font-serif text-gray-400 mt-12 tracking-tighter">HELLO, MY
 						NAME IS</div>
 					<div class="my-16 flex flex-col">
@@ -107,9 +113,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="section-intro-img  flex justify-center">
+				<div class="section-intro-img  flex justify-center basis-1/2 ">
 					<img src="/images/sakib.png" alt=""
-						class="w-[90%] md:w-[500px] aspect-square object-cover rounded-full border-4 border-gray-500 mt-16">
+						class="w-[90%] md:w-[350px] md:h-[350px] xl:w-[450px] xl:h-[450px] aspect-square object-cover  rounded-full border-4 border-gray-500 mt-16">
 				</div>
 			</div>
 			<!-- About Section -->
@@ -156,10 +162,11 @@
 			<!-- What I do section -->
 			<div class="what_I_do ">
 				<div
-					class="font-serif text-4xl md:text-5xl font-stretch-ultra-condensed tracking-tighter font-semibold my-12">
+					class="font-serif text-4xl md:text-5xl font-stretch-ultra-condensed tracking-tighter font-semibold my-12 text-center sm:text-left">
 					What I do</div>
 				<div class="flex mt-12 flex-col md:flex-row">
-					<div class="flex-1 tracking-tighter text-gray-500">From understanding your
+					<div class="flex-1 tracking-tighter text-gray-500 text-center sm:text-left">From
+						understanding your
 						requirements,
 						designing a
 						blueprint and
@@ -171,7 +178,7 @@
 					</div>
 				</div>
 				<div class="flex mt-12 gap-4 flex-col md:flex-row">
-					<div class="flex-1 flex gap-4">
+					<div class="flex-1 flex gap-4 flex-col sm:flex-row text-center sm:text-left">
 
 						<div><i class="bi bi-pencil-fill text-blue-500 text-xl"></i></div>
 						<div class="flex-1">
@@ -182,8 +189,8 @@
 								innovative and neat with all of this.</div>
 						</div>
 					</div>
-					<div class="flex-1 flex gap-4">
-						<div class="md:border-l-2 boder-gray-400"></div>
+					<div class="flex-1 flex gap-4 flex-col sm:flex-row text-center sm:text-left">
+						<div class="sm:border-l-2 boder-gray-400"></div>
 						<div><i class="bi bi-code-slash text-blue-500 text-xl"></i></div>
 						<div class="flex-1">
 							<div class="text-lg">Web Development</div>
@@ -195,7 +202,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="flex-1 flex gap-4">
+					<div class="flex-1 flex gap-4 flex-col sm:flex-row text-center sm:text-left">
 						<div class="md:border-l-2 boder-gray-400"></div>
 						<div><i class="bi bi-phone text-blue-500 text-xl"></i></div>
 						<div class="flex-1">
@@ -214,12 +221,13 @@
 			</div>
 		</section>
 	</section>
-	<div class="gap h-96"></div>
+	<div class="gap h-[70vh]"></div>
 	<section class="middle-section  bg-[#f6f8fa]">
-		<div class="container mx-auto max-w-[1200px]  min-[1200px]:px-32">
+		<div
+			class="container mx-auto max-w-[400px] md:max-w-[750px] xl:max-w-[1200px]  px-4 min-[1200px]:px-32">
 			<!-- Skill and Experience Section  -->
-			<section class="skill-and-experience flex flex-col md:flex-row pt-32 gap-32">
-				<div class="skills flex-1">
+			<section class="skill-and-experience flex flex-col md:flex-row pt-32 ">
+				<div class="skills basis-1/2 sm:pe-16">
 					<div
 						class="header font-serif text-4xl md:text-5xl font-stretch-ultra-condensed tracking-tighter font-semibold my-12">
 						Skills</div>
@@ -275,23 +283,24 @@
 					</div>
 				</div>
 				<!-- Showing the work Experience -->
-				<div class="experience flex-1">
+				<div class="experience basis-1/2">
 					<div
 						class="header font-serif text-4xl md:text-5xl font-stretch-ultra-condensed tracking-tighter font-semibold my-12">
 						My Experience</div>
-					<div class="flex flex-col gap-8">
-						<div class="flex gap-16">
-							<div class="flex flex-col gap-4 text-end">
-								<div class="flex flex-col gap-2 w-[100px]">
+					<!-- Experience Listing -->
+					<div class="flex flex-col gap-12">
+						<div class="flex gap-6 md:gap-16 flex-col md:flex-row">
+							<div class="flex flex-col gap-4 md:text-end basis-2/6">
+								<div class="flex flex-col gap-2 ">
 									<div class="">2026-current</div>
-									<div class="-me-6"><i
+									<div class="md:-me-6 text-end"><i
 											class="bi bi-arrow-right-circle-fill"></i>
 									</div>
 									<div class="text-gray-400">Bd Funnel Builder
 									</div>
 								</div>
 							</div>
-							<div class="flex-1 flex flex-col gap-4">
+							<div class="basis-4/6 flex flex-col gap-4">
 								<div class="flex flex-col gap-4">
 									<div
 										class="label text-[#009bdf] text-lg font-semibold tracking-tighter mt-4">
@@ -303,17 +312,17 @@
 								</div>
 							</div>
 						</div>
-						<div class="flex gap-16">
-							<div class="flex flex-col gap-4 text-end">
-								<div class="flex flex-col gap-2 w-[100px]">
+						<div class="flex gap-6 md:gap-16 flex-col md:flex-row">
+							<div class="flex flex-col gap-4 md:text-end basis-2/6">
+								<div class="flex flex-col gap-2">
 									<div class="">2023</div>
-									<div class="-me-6"><i
+									<div class="md:-me-6 text-end"><i
 											class="bi bi-arrow-right-circle-fill"></i>
 									</div>
 									<div class="text-gray-400">Bright Tutors</div>
 								</div>
 							</div>
-							<div class="flex-1 flex flex-col gap-4">
+							<div class="basis-4/6 flex flex-col gap-4">
 								<div class="flex flex-col gap-4">
 									<div
 										class="label text-[#009bdf] text-lg font-semibold tracking-tighter mt-4">
@@ -327,18 +336,18 @@
 								</div>
 							</div>
 						</div>
-						<div class="flex gap-16">
-							<div class="flex flex-col gap-4 text-end">
-								<div class="flex flex-col gap-2 w-[100px]">
+						<div class="flex gap-6 md:gap-16 flex-col md:flex-row">
+							<div class="flex flex-col gap-4 md:text-end basis-2/6">
+								<div class="flex flex-col gap-2">
 									<div class="">2022</div>
-									<div class="-me-6"><i
+									<div class="md:-me-6 text-end"><i
 											class="bi bi-arrow-right-circle-fill"></i>
 									</div>
 									<div class="text-gray-400">New Vision IT
 									</div>
 								</div>
 							</div>
-							<div class="flex-1 flex flex-col gap-4">
+							<div class="basis-4/6 flex flex-col gap-4">
 								<div class="flex flex-col gap-4">
 									<div
 										class="label text-[#009bdf] text-lg font-semibold tracking-tighter mt-4">
@@ -364,7 +373,7 @@
 					<button class="text-6xl text-[#009bdf]"><i
 							class="bi bi-arrow-right"></i></button>
 				</div>
-				<div class="projct-imgs grid grid-cols-3 gap-4">
+				<div class="projct-imgs grid sm:grid-cols-3 gap-4">
 					<div class="row-span-3"><img src="\images\project_images\Capture7.png" alt="">
 					</div>
 					<div class="mt-5"><img src="\images\project_images\Capture3.png" alt=""></div>
@@ -378,23 +387,26 @@
 	</section>
 
 	<section class="lower-section bg-white">
-		<div class="container mx-auto max-w-[1200px]  min-[1200px]:px-32 ">
-			<div class="flex justify-between py-24">
-				<div class="left-side">
+		<div
+			class="container mx-auto max-w-[400px] md:max-w-[750px] xl:max-w-[1200px]  px-4 min-[1200px]:px-32 ">
+			<div class="flex flex-col sm:flex-row justify-between py-24 text-center sm:text-left">
+				<div class="left-side  w-full md:w-[200px] lg:w-auto">
 					<div
-						class="font-serif text-lg md:text-xl font-stretch-ultra-condensed tracking-tighter font-semibold my-12">
+						class="font-serif text-lg md:text-xl font-stretch-ultra-condensed tracking-tighter font-semibold  ">
 						Based in Bangladesh, working worldwide</div>
-					<a href="#"
-						class="font-serif text-5xl md:text-7xl font-stretch-ultra-condensed tracking-tighter font-semibold underline hover:text-[#009bdf]">Get
-						in touch</a>
+					<div class="my-6">
+						<a href="#"
+							class="font-serif text-5xl md:text-7xl font-stretch-ultra-condensed tracking-tighter font-semibold underline hover:text-[#009bdf] ">Get
+							in touch</a>
+					</div>
 				</div>
 				<div class="right-side">
-					<div class="flex gap-16">
+					<div class="flex gap-4 lg:gap-16 flex-col lg:flex-row">
 						<div class="flex flex-col">
 							<div
-								class="font-serif text-lg md:text-xl font-stretch-ultra-condensed tracking-tighter font-semibold my-12">
+								class="font-serif text-lg md:text-xl font-stretch-ultra-condensed tracking-tighter font-semibold">
 								Social</div>
-							<div class="flex flex-col tracking-tighter text-gray-400">
+							<div class="flex flex-col tracking-tighter text-gray-400 mt-8">
 								<a href="" class="hover:text-[#009bdf]">Instagram</a>
 								<a href="" class="hover:text-[#009bdf]">Facebook</a>
 								<a href="" class="hover:text-[#009bdf]">Github</a>
@@ -403,9 +415,9 @@
 						</div>
 						<div class="flex flex-col">
 							<div
-								class="font-serif text-lg md:text-xl font-stretch-ultra-condensed tracking-tighter font-semibold my-12">
+								class="font-serif text-lg md:text-xl font-stretch-ultra-condensed tracking-tighter font-semibold ">
 								Services</div>
-							<div class="flex flex-col tracking-tighter text-gray-400">
+							<div class="flex flex-col tracking-tighter text-gray-400 mt-8">
 
 								<a href="" class="hover:text-[#009bdf]">Web
 									Development</a>
