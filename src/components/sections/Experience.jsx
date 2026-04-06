@@ -23,7 +23,7 @@ export default function Experience() {
               }`}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
               <div className="relative z-10 flex-shrink-0 md:absolute md:left-1/2 md:-translate-x-1/2 mt-1 md:mt-5">
@@ -41,7 +41,7 @@ export default function Experience() {
                   ? 'md:pr-12 md:text-right'
                   : 'md:pl-12 md:text-left'
               }`}>
-                <div className={`rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white dark:glass shadow-md dark:shadow-none card-hover ${
+                <div className={`rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white glass shadow-md dark:shadow-none card-hover ${
                   exp.type === 'current' ? 'glow-primary' : ''
                 }`}>
                   {exp.type === 'current' && (

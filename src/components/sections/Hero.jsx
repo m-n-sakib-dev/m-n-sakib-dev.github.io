@@ -124,7 +124,7 @@ export default function Hero() {
               </div>
 
               <motion.div
-                className="absolute -top-4 -right-4 bg-white dark:glass rounded-2xl px-3 py-2 shadow-lg dark:shadow-black/20 border border-slate-100 dark:border-white/10"
+                className="absolute -top-4 -right-4 bg-white glass rounded-2xl px-3 py-2 shadow-lg dark:shadow-black/20 border border-slate-100 dark:border-white/10"
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
               >
@@ -138,7 +138,7 @@ export default function Hero() {
               </motion.div>
 
               <motion.div
-                className="absolute -bottom-4 -left-4 bg-white dark:glass rounded-2xl px-3 py-2 shadow-lg dark:shadow-black/20 border border-slate-100 dark:border-white/10"
+                className="absolute -bottom-4 -left-4 bg-white glass rounded-2xl px-3 py-2 shadow-lg dark:shadow-black/20 border border-slate-100 dark:border-white/10"
                 animate={{ y: [0, 6, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
               >

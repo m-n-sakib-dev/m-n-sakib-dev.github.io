@@ -6,7 +6,7 @@ export default function SectionTitle({ label, title, subtitle }) {
       className="mb-14 text-center"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.6 }}
     >
       {label && (

@@ -24,7 +24,7 @@ export default function Skills() {
               className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 border ${
                 active === i
                   ? 'bg-purple-600 text-white border-purple-600 shadow-lg shadow-purple-500/20'
-                  : 'border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-400 bg-white dark:glass hover:border-purple-400 dark:hover:border-purple-500'
+                  : 'border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-400 bg-white glass hover:border-purple-400 dark:hover:border-purple-500'
               }`}
               whileTap={{ scale: 0.95 }}
             >
@@ -38,7 +38,7 @@ export default function Skills() {
           <AnimatePresence mode="wait">
             <motion.div
               key={active}
-              className="rounded-2xl p-6 border border-slate-200 dark:border-white/10 bg-white dark:glass shadow-md dark:shadow-none"
+              className="rounded-2xl p-6 border border-slate-200 dark:border-white/10 bg-white glass shadow-md dark:shadow-none"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -67,12 +67,12 @@ export default function Skills() {
                 className={`rounded-2xl p-4 border cursor-pointer transition-all duration-200 ${
                   active === i
                     ? 'border-purple-400 dark:border-purple-500/50 bg-purple-50 dark:bg-purple-900/20'
-                    : 'border-slate-200 dark:border-white/10 bg-white dark:glass hover:border-purple-300 dark:hover:border-purple-600/40'
+                    : 'border-slate-200 dark:border-white/10 bg-white glass hover:border-purple-300 dark:hover:border-purple-600/40'
                 }`}
                 onClick={() => setActive(i)}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.4, delay: i * 0.06 }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}

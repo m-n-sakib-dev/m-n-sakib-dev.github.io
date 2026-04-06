@@ -18,10 +18,10 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
             <motion.div
-              className="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 bg-slate-50 dark:glass shadow-md"
+              className="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 bg-slate-50 glass shadow-md"
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.6 }}
             >
               <div className="aspect-[4/3] flex flex-col items-center justify-center bg-gradient-to-br from-purple-50 to-cyan-50 dark:from-purple-900/20 dark:to-cyan-900/20">
@@ -37,13 +37,13 @@ export default function About() {
               className="grid grid-cols-2 gap-3"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               {stats.map((s) => (
                 <div
                   key={s.label}
-                  className="rounded-xl p-4 text-center border border-slate-200 dark:border-white/10 bg-white dark:glass"
+                  className="rounded-xl p-4 text-center border border-slate-200 dark:border-white/10 bg-white glass"
                 >
                   <p className="text-2xl font-extrabold gradient-text">{s.value}</p>
                   <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{s.label}</p>
@@ -56,7 +56,7 @@ export default function About() {
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.6 }}
             >
               <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
@@ -83,7 +83,7 @@ export default function About() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.5, delay: 0.15 }}
             >
               <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">Education</h3>
@@ -103,7 +103,7 @@ export default function About() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.5, delay: 0.25 }}
             >
               <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">Achievements</h3>
@@ -120,13 +120,13 @@ export default function About() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.5, delay: 0.35 }}
             >
               <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">Languages</h3>
               <div className="flex flex-wrap gap-2">
                 {languages.map((l) => (
-                  <span key={l.name} className="text-xs px-3 py-1.5 rounded-full border border-slate-200 dark:border-white/10 bg-white dark:glass text-slate-600 dark:text-slate-300">
+                  <span key={l.name} className="text-xs px-3 py-1.5 rounded-full border border-slate-200 dark:border-white/10 bg-white glass text-slate-600 dark:text-slate-300">
                     {l.name} <span className="text-slate-400 dark:text-slate-500">· {l.level}</span>
                   </span>
                 ))}

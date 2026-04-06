@@ -3,7 +3,7 @@ import { useRef } from 'react';
 
 export default function ProgressBar({ name, level }) {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, amount: 0.5 });
+  const inView = useInView(ref, { once: false, amount: 0.5 });
 
   return (
     <div ref={ref} className="mb-4">

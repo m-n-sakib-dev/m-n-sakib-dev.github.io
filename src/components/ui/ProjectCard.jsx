@@ -7,11 +7,11 @@ export default function ProjectCard({ project, index }) {
   return (
     <motion.div
       className="group relative rounded-2xl overflow-hidden cursor-pointer card-hover
-        bg-white dark:glass border border-slate-200 dark:border-white/10
+        bg-white glass border border-slate-200 dark:border-white/10
         shadow-md dark:shadow-none"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: false, amount: 0.1 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       onClick={() => navigate(`/project/${project.id}`)}
     >

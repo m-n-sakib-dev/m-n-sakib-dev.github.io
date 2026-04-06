@@ -51,7 +51,7 @@ export default function Contact() {
             className="space-y-4"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.5 }}
           >
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">Get in Touch</h3>
@@ -88,7 +88,7 @@ export default function Contact() {
                 href={personalInfo.github}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 px-4 py-2 rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:glass text-sm text-slate-700 dark:text-slate-300 hover:border-purple-400 dark:hover:border-purple-500 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl border border-slate-200 dark:border-white/10 bg-white glass text-sm text-slate-700 dark:text-slate-300 hover:border-purple-400 dark:hover:border-purple-500 transition-colors"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
@@ -101,7 +101,7 @@ export default function Contact() {
                 href={personalInfo.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 px-4 py-2 rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:glass text-sm text-slate-700 dark:text-slate-300 hover:border-blue-400 dark:hover:border-blue-500 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl border border-slate-200 dark:border-white/10 bg-white glass text-sm text-slate-700 dark:text-slate-300 hover:border-blue-400 dark:hover:border-blue-500 transition-colors"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
@@ -114,10 +114,10 @@ export default function Contact() {
           </motion.div>
 
           <motion.div
-            className="rounded-2xl p-6 border border-slate-200 dark:border-white/10 bg-white dark:glass shadow-md dark:shadow-none"
+            className="rounded-2xl p-6 border border-slate-200 dark:border-white/10 bg-white glass shadow-md dark:shadow-none"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h3 className="text-base font-bold text-slate-900 dark:text-white mb-4">Quick Message</h3>

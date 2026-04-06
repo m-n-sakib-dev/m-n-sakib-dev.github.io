@@ -125,7 +125,7 @@ export default function ProjectDetail() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <div className="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white dark:glass shadow-md dark:shadow-none">
+            <div className="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white glass shadow-md dark:shadow-none">
               <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">Tech Stack</h3>
               <div className="flex flex-wrap gap-2">
                 {project.tech.map((t) => (
@@ -139,7 +139,7 @@ export default function ProjectDetail() {
               </div>
             </div>
 
-            <div className="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white dark:glass shadow-md dark:shadow-none space-y-3">
+            <div className="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white glass shadow-md dark:shadow-none space-y-3">
               <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">Links</h3>
               {project.liveLink ? (
                 <a
@@ -175,7 +175,7 @@ export default function ProjectDetail() {
               )}
             </div>
 
-            <div className="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white dark:glass shadow-md dark:shadow-none">
+            <div className="rounded-2xl p-5 border border-slate-200 dark:border-white/10 bg-white glass shadow-md dark:shadow-none">
               <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">Category</h3>
               <span className="text-sm font-medium text-slate-700 dark:text-slate-300">{project.category}</span>
             </div>

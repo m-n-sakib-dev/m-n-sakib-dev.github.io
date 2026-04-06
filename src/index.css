@@ -5,203 +5,222 @@
 /* ─── Global Color Variables ─────────────────────────────────────────────── */
 /* Change any of these to retheme the entire site instantly */
 :root {
-  --color-primary: #8b5cf6;
-  --color-primary-light: #a78bfa;
-  --color-secondary: #06b6d4;
-  --color-accent: #f59e0b;
+        --color-primary: #8b5cf6;
+        --color-primary-light: #a78bfa;
+        --color-secondary: #06b6d4;
+        --color-accent: #f59e0b;
 
-  --color-bg-light: #f1f5f9;
-  --color-surface-light: #ffffff;
+        --color-bg-light: #f1f5f9;
+        --color-surface-light: #ffffff;
 
-  --color-bg-dark: #07071a;
-  --color-surface-dark: rgba(255, 255, 255, 0.04);
-  --color-border-dark: rgba(255, 255, 255, 0.08);
+        --color-bg-dark: #07071a;
+        --color-surface-dark: rgba(255, 255, 255, 0.04);
+        --color-border-dark: rgba(255, 255, 255, 0.08);
 }
 
 /* ─── Base ───────────────────────────────────────────────────────────────── */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
 }
 
 html {
-  scroll-behavior: smooth;
+        scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.3s, color 0.3s;
-  background-color: var(--color-bg-light);
-  color: #1e293b;
+        font-family: "Inter", system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transition:
+                background-color 0.3s,
+                color 0.3s;
+        background-color: var(--color-bg-light);
+        color: #1e293b;
 }
 
 .dark body {
-  background-color: transparent;
-  color: #e2e8f0;
+        background-color: transparent;
+        color: #e2e8f0;
 }
 
 .dark {
-  background-color: var(--color-bg-dark);
-  background-image:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(139, 92, 246, 0.18) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 85% 100%, rgba(6, 182, 212, 0.10) 0%, transparent 55%);
-  background-attachment: fixed;
-  min-height: 100vh;
+        background-color: var(--color-bg-dark);
+        background-image: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(139, 92, 246, 0.18) 0%, transparent 60%), radial-gradient(ellipse 60% 40% at 85% 100%, rgba(6, 182, 212, 0.1) 0%, transparent 55%);
+        background-attachment: fixed;
+        min-height: 100vh;
 }
 
 /* ─── Glassmorphism ──────────────────────────────────────────────────────── */
-.glass {
-  background: var(--color-surface-dark);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--color-border-dark);
+.dark .glass {
+        background: var(--color-surface-dark);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid var(--color-border-dark);
 }
 
-.glass-strong {
-  background: rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+.dark .glass-strong {
+        background: rgba(255, 255, 255, 0.07);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 /* ─── Gradient Text ──────────────────────────────────────────────────────── */
 .gradient-text {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+        background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
 }
 
 .gradient-text-warm {
-  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-accent) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+        background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-accent) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
 }
 
 /* ─── Gradient Border Button ─────────────────────────────────────────────── */
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  color: #fff;
-  border: none;
-  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+        background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+        color: #fff;
+        border: none;
+        transition:
+                opacity 0.2s,
+                transform 0.2s,
+                box-shadow 0.2s;
 }
 
 .btn-primary:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.35);
+        opacity: 0.9;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(139, 92, 246, 0.35);
 }
 
 .btn-outline {
-  background: transparent;
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary);
-  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+        background: transparent;
+        border: 1px solid var(--color-primary);
+        color: var(--color-primary);
+        transition:
+                background 0.2s,
+                color 0.2s,
+                transform 0.2s,
+                box-shadow 0.2s;
 }
 
 .btn-outline:hover {
-  background: var(--color-primary);
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+        background: var(--color-primary);
+        color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
 }
 
 /* ─── Scrollbar ──────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar {
-  width: 5px;
+        width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+        background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-primary);
-  border-radius: 3px;
+        background: var(--color-primary);
+        border-radius: 3px;
 }
 
 /* ─── Selection ──────────────────────────────────────────────────────────── */
 ::selection {
-  background: rgba(139, 92, 246, 0.3);
+        background: rgba(139, 92, 246, 0.3);
 }
 
 /* ─── Container ──────────────────────────────────────────────────────────── */
 .container-main {
-  width: 100%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
 }
 
 @media (min-width: 640px) {
-  .container-main {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
+        .container-main {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+        }
 }
 
 @media (min-width: 1024px) {
-  .container-main {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+        .container-main {
+                padding-left: 2rem;
+                padding-right: 2rem;
+        }
 }
 
 /* ─── Section ────────────────────────────────────────────────────────────── */
 .section-padding {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
 }
 
 @media (min-width: 768px) {
-  .section-padding {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-  }
+        .section-padding {
+                padding-top: 7rem;
+                padding-bottom: 7rem;
+        }
 }
 
 /* ─── Glow ───────────────────────────────────────────────────────────────── */
 .glow-primary {
-  box-shadow: 0 0 40px rgba(139, 92, 246, 0.2);
+        box-shadow: 0 0 40px rgba(139, 92, 246, 0.2);
 }
 
 .glow-secondary {
-  box-shadow: 0 0 40px rgba(6, 182, 212, 0.2);
+        box-shadow: 0 0 40px rgba(6, 182, 212, 0.2);
 }
 
 /* ─── Animated Gradient Background (Hero) ────────────────────────────────── */
 @keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+        0%,
+        100% {
+                background-position: 0% 50%;
+        }
+        50% {
+                background-position: 100% 50%;
+        }
 }
 
 .animated-gradient {
-  background: linear-gradient(-45deg, var(--color-primary), var(--color-secondary), var(--color-primary-light), var(--color-accent));
-  background-size: 400% 400%;
-  animation: gradientShift 8s ease infinite;
+        background: linear-gradient(-45deg, var(--color-primary), var(--color-secondary), var(--color-primary-light), var(--color-accent));
+        background-size: 400% 400%;
+        animation: gradientShift 8s ease infinite;
 }
 
 /* ─── Floating animation ─────────────────────────────────────────────────── */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
+        0%,
+        100% {
+                transform: translateY(0);
+        }
+        50% {
+                transform: translateY(-12px);
+        }
 }
 
 .float-animation {
-  animation: float 4s ease-in-out infinite;
+        animation: float 4s ease-in-out infinite;
 }
 
 /* ─── Card Hover ─────────────────────────────────────────────────────────── */
 .card-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
 }
 
 .card-hover:hover {
-  transform: translateY(-6px);
+        transform: translateY(-6px);
 }

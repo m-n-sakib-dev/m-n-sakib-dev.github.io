@@ -17,7 +17,7 @@ export default function Projects() {
           className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.05 }}
+          viewport={{ once: false, amount: 0.05 }}
         >
           {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
