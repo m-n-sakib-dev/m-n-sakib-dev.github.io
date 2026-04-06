@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react";
 // base: '/repo-name/' for GitHub Pages project site (e.g. '/m-n-sakib-dev.github.io/')
 export default defineConfig({
         plugins: [react()],
-        base: "/m_n_sakib-s_portfolio/",
+        base: "/",
         build: {
                 outDir: "dist",
         },
