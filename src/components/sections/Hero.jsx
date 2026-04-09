@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { personalInfo } from '../../data';
+import my_profile_pic from '../../assets/Sakib.jpg.png'
 
 const container = {
   hidden: {},
@@ -113,16 +114,16 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.3 }}
           >
             <div className="relative">
-              <div className="w-72 h-72 rounded-3xl overflow-hidden border-2 border-purple-300 dark:border-purple-500/30 shadow-2xl glow-primary float-animation">
-                {/* Profile photo — replace with: <img src="your-photo.jpg" alt="Nazmul Sakib" className="w-full h-full object-cover" /> */}
-                <div className="w-full h-full bg-gradient-to-br from-purple-100 via-violet-100 to-cyan-100 dark:from-purple-900/40 dark:via-violet-900/40 dark:to-cyan-900/40 flex flex-col items-center justify-center gap-3">
+              <div className="w-74 h-74 rounded-3xl border-2 border-purple-300 dark:border-purple-500/30 shadow-2xl glow-primary float-animation">
+                <img src={my_profile_pic} alt="Nazmul Sakib" className="w-full h-full object-cover" />
+
+              </div>
+              {/* <div className="w-full h-full bg-gradient-to-br from-purple-100 via-violet-100 to-cyan-100 dark:from-purple-900/40 dark:via-violet-900/40 dark:to-cyan-900/40 flex flex-col items-center justify-center gap-3">
                   <svg className="w-20 h-20 text-purple-300 dark:text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                   <span className="text-xs text-slate-400 dark:text-slate-500 font-mono">profile photo here</span>
-                </div>
-              </div>
-
+                </div> */}
               <motion.div
                 className="absolute -top-4 -right-4 bg-white glass rounded-2xl px-3 py-2 shadow-lg dark:shadow-black/20 border border-slate-100 dark:border-white/10"
                 animate={{ y: [0, -6, 0] }}
