@@ -32,7 +32,7 @@ export default function Hero() {
       </div>
 
       <div className="container-main py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div variants={container} initial="hidden" animate="show">
             <motion.div variants={item} className="mb-4">
               <span className="inline-flex items-center gap-2 text-sm font-mono font-medium px-4 py-1.5 rounded-full border border-purple-300 dark:border-purple-500/40 bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300">
@@ -108,13 +108,13 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            className="hidden lg:flex justify-center items-center"
+            className="md:flex justify-center items-center mx-4"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
             <div className="relative">
-              <div className="w-74 h-74 rounded-3xl border-2 border-purple-300 dark:border-purple-500/30 shadow-2xl glow-primary float-animation">
+              <div className="w-[320px] h-[420px] lg:w-[400px] lg:h-[520px] rounded-3xl border-2 border-purple-300 dark:border-purple-500/30 shadow-2xl glow-primary float-animation">
                 <img src={my_profile_pic} alt="Nazmul Sakib" className="w-full h-full object-cover" />
 
               </div>

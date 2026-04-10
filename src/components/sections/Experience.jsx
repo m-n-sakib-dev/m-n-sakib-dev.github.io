@@ -34,7 +34,7 @@ export default function Experience() {
                 </div>
               </div>
 
-              <div className={`md:w-1/2 pl-14 md:pl-0 ${i % 2 === 0
+              <div className={`md:w-1/2  md:pl-0 ${i % 2 === 0
                 ? 'md:pr-12 md:text-right'
                 : 'md:pl-12 md:text-left'
                 }`}>
