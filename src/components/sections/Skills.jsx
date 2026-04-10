@@ -21,11 +21,10 @@ export default function Skills() {
             <motion.button
               key={group.category}
               onClick={() => setActive(i)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 border ${
-                active === i
-                  ? 'bg-purple-600 text-white border-purple-600 shadow-lg shadow-purple-500/20'
-                  : 'border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-400 bg-white glass hover:border-purple-400 dark:hover:border-purple-500'
-              }`}
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 border ${active === i
+                ? 'bg-purple-600 text-white border-purple-600 shadow-lg shadow-purple-500/20'
+                : 'border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-400 bg-white glass hover:border-purple-400 dark:hover:border-purple-500'
+                }`}
               whileTap={{ scale: 0.95 }}
             >
               <span className="font-mono text-xs">{group.icon}</span>
@@ -64,11 +63,10 @@ export default function Skills() {
             {skillGroups.map((group, i) => (
               <motion.div
                 key={group.category}
-                className={`rounded-2xl p-4 border cursor-pointer transition-all duration-200 ${
-                  active === i
-                    ? 'border-purple-400 dark:border-purple-500/50 bg-purple-50 dark:bg-purple-900/20'
-                    : 'border-slate-200 dark:border-white/10 bg-white glass hover:border-purple-300 dark:hover:border-purple-600/40'
-                }`}
+                className={`rounded-2xl p-4 border cursor-pointer transition-all duration-200 ${active === i
+                  ? 'border-purple-400 dark:border-purple-500/50 bg-purple-50 dark:bg-purple-900/20'
+                  : 'border-slate-200 dark:border-white/10 bg-white glass hover:border-purple-300 dark:hover:border-purple-600/40'
+                  }`}
                 onClick={() => setActive(i)}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -80,15 +78,15 @@ export default function Skills() {
                 <div className="text-xl mb-2 font-mono text-purple-600 dark:text-purple-400">
                   {group.icon}
                 </div>
-                <p className="text-sm font-semibold text-slate-800 dark:text-slate-200 mb-1">
+                <p className="text-md font-semibold text-slate-800 dark:text-slate-200 mb-1">
                   {group.category}
                 </p>
-                <p className="text-xs text-slate-500 dark:text-slate-500">
+                <p className="text-snm text-slate-500 dark:text-slate-500">
                   {group.skills.length} skills
                 </p>
                 <div className="mt-2 flex flex-wrap gap-1">
-                  {group.skills.slice(0, 2).map((s) => (
-                    <span key={s.name} className="text-xs px-1.5 py-0.5 rounded bg-slate-100 dark:bg-white/8 text-slate-500 dark:text-slate-500">
+                  {group.skills.map((s) => (
+                    <span key={s.name} className="text-sm px-1.5 py-0.5 rounded bg-slate-100 dark:bg-white/20 text-slate-500 dark:text-cyan-400">
                       {s.name.split('/')[0].trim()}
                     </span>
                   ))}

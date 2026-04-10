@@ -3,7 +3,7 @@ import { personalInfo, education, achievements, languages } from '../../data';
 import SectionTitle from '../ui/SectionTitle';
 
 const stats = [
-  { value: '3+', label: 'Years Coding' },
+  { value: '6+', label: 'Years Coding' },
   { value: '6+', label: 'Projects Built' },
   { value: '40–50%', label: 'Query Speedup' },
   { value: '10+', label: 'Tech Stacks' },
@@ -92,8 +92,8 @@ export default function About() {
                   <div key={e.degree} className="flex items-start gap-3">
                     <div className="mt-1.5 w-2 h-2 rounded-full bg-purple-500 flex-shrink-0" />
                     <div>
-                      <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">{e.degree}</p>
-                      <p className="text-xs text-slate-500 dark:text-slate-400">{e.institution} · {e.year}</p>
+                      <p className="text-lg font-semibold text-slate-800 dark:text-slate-200">{e.degree}</p>
+                      <p className="text-sm text-slate-500 dark:text-slate-400">{e.institution} · {e.year}</p>
                     </div>
                   </div>
                 ))}
