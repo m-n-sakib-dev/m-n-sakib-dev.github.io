@@ -98,21 +98,31 @@ export default function ProjectDetail() {
             >
               <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-4">Screenshots</h2>
               <div className="grid sm:grid-cols-2 gap-4">
-                {Array.from({ length: screenshotCount }).map((_, i) => (
+                {project.screenshots.map((src, i) => (
                   <motion.div
                     key={i}
-                    className="rounded-xl overflow-hidden border border-slate-200 dark:border-white/10 bg-gradient-to-br from-purple-50 to-cyan-50 dark:from-purple-900/20 dark:to-cyan-900/20 aspect-video flex flex-col items-center justify-center gap-2"
+                    className="rounded-xl overflow-hidden border border-slate-200 dark:border-white/10 bg-gradient-to-br from-purple-50 to-cyan-50 dark:from-purple-900/20 dark:to-cyan-900/20  flex flex-col items-center justify-center gap-2"
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4, delay: 0.2 + i * 0.08 }}
                   >
-                    {/* Replace each div with: <img src="screenshot-{i+1}.png" alt="{screenshotLabels[i]}" className="w-full h-full object-cover" /> */}
-                    <svg className="w-10 h-10 text-slate-300 dark:text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    <p className="text-xs text-slate-400 dark:text-slate-600 font-mono text-center px-4">
-                      {screenshotLabels[i] || `Screenshot ${i + 1}`}
-                    </p>
+
+                    {src ? (
+                      <img
+                        src={src}
+                        alt={screenshotLabels[i]}
+                        className="w-full max-h-[300px] object-contain"
+                      />
+                    ) : (
+                      <>
+                        <svg className="w-10 h-10 text-slate-300 dark:text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <p className="text-xs text-slate-400 dark:text-slate-600 font-mono text-center px-4">
+                          {screenshotLabels[i] || `Screenshot ${i + 1}`}
+                        </p>
+                      </>
+                    )}
                   </motion.div>
                 ))}
               </div>
@@ -149,7 +159,7 @@ export default function ProjectDetail() {
                   className="flex items-center gap-2 w-full btn-primary px-4 py-2.5 rounded-xl text-sm font-semibold justify-center"
                 >
                   <ExternalIcon />
-                  Live Demo
+                  Live
                 </a>
               ) : (
                 <div className="flex items-center gap-2 w-full px-4 py-2.5 rounded-xl text-sm font-medium justify-center border border-slate-200 dark:border-white/10 text-slate-400 dark:text-slate-600 cursor-not-allowed">

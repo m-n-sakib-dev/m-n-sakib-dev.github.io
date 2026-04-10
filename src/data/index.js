@@ -1,3 +1,4 @@
+import { getProjectScreenshots, getDisplayImage } from '../utils/imageHelper';
 export const personalInfo = {
   name: 'MD. Nazmul Sakib',
   title: 'Full-Stack Software Engineer',
@@ -144,41 +145,33 @@ export const projects = [
     id: 'odommopress',
     title: 'Odommopress',
     subtitle: 'E-book E-commerce Platform',
+    displayImg: getDisplayImage('odommopress'),
     shortDesc:
-      'Production-ready e-book store with category management, dynamic order tables, and real-time API integration.',
+      'Production-ready e-book store with category management, dynamic order tables, digital payment with SSlcommerz and real-time API integration.',
     longDesc:
       'Developed core front-end modules for a production e-commerce platform owned by BD Funnel Builder. Built Category Management, Dynamic Order Tables, Language and Tag management modules. Collaborated on API integration to ensure real-time data consistency between the Nuxt.js frontend and the backend REST APIs.',
-    tech: ['Nuxt.js', 'Vue.js', 'Tailwind CSS', 'REST API'],
+    tech: ['Nuxt.js', 'Vue.js', 'Tailwind CSS', 'Pinia Store', 'REST API', 'JWT authenitcation'],
     category: 'E-commerce',
     badge: 'Production',
-    liveLink: '',
+    liveLink: 'https://odommopress.com/',
     githubLink: '',
-    screenshots: [
-      // Home / landing page screenshot
-      // Category management page screenshot
-      // Order management table screenshot
-      // Product detail page screenshot
-    ],
+    screenshots: getProjectScreenshots('odommopress'),
   },
   {
     id: 'fill-blog',
     title: 'Fill Blog',
     subtitle: 'Multi-Author Blog Platform',
+    displayImg: getDisplayImage('fillblog'),
     shortDesc:
       'Live multi-author blog platform with custom user domains, article publishing, and role-based permissions.',
     longDesc:
-      'Built a multi-author blog platform with custom user domains (main_domain/username), article publishing, category & tag management, and role-based permissions. Full-stack implementation using Laravel + Filament for the admin and backend, and Inertia.js for the frontend SPA. Deployed live on Laravel Cloud.',
-    tech: ['Laravel', 'Filament', 'Inertia.js', 'Laravel Cloud', 'Role-Based Permissions'],
+      'Built a multi-author blog platform with custom user domains (main_domain/username), article publishing, category & tag management, and role-based permissions. Full-stack implementation using Laravel + Filament for the admin and backend, and Inertia.js for the frontend SPA. Deployed live on Laravel Cloud. It is fully responsive for Mobile, Tablet and Desktop.',
+    tech: ['Laravel', 'Filament', 'Inertia.js', 'Laravel Cloud', 'VueJs', 'Spatie Role-Based Permissions'],
     category: 'Blog Platform',
     badge: 'Live',
-    liveLink: '',
-    githubLink: '',
-    screenshots: [
-      // Blog home / article listing page screenshot
-      // Single article page screenshot
-      // Admin panel / Filament dashboard screenshot
-      // User profile page screenshot
-    ],
+    liveLink: 'https://fill-blog-main-lplrtb.free.laravel.cloud/',
+    githubLink: 'https://github.com/m-n-sakib-dev/fill-blog',
+    screenshots: getProjectScreenshots('fillblog'),
   },
   {
     id: 'itweet',
@@ -192,7 +185,7 @@ export const projects = [
     category: 'Social Media',
     badge: 'In Progress',
     liveLink: '',
-    githubLink: '',
+    githubLink: 'https://github.com/m-n-sakib-dev/itweet/',
     screenshots: [
       // Feed / home timeline screenshot
       // Post detail with comments screenshot
@@ -221,9 +214,10 @@ export const projects = [
     ],
   },
   {
-    id: 'ecommerce-frontend',
-    title: 'E-Commerce Frontend',
+    id: 'uBuy',
+    title: 'uBuy',
     subtitle: 'Nuxt.js + Pinia Store',
+    displayImg: getDisplayImage('ubuy'),
     shortDesc:
       'Complete e-commerce frontend with product listing, cart management, and checkout — built with Nuxt.js and Pinia.',
     longDesc:
@@ -232,13 +226,8 @@ export const projects = [
     category: 'E-commerce',
     badge: 'Frontend',
     liveLink: '',
-    githubLink: '',
-    screenshots: [
-      // Product listing / shop page screenshot
-      // Product detail page screenshot
-      // Shopping cart screenshot
-      // Checkout flow screenshot
-    ],
+    githubLink: 'https://github.com/m-n-sakib-dev/uBuy-ecommerce',
+    screenshots: getProjectScreenshots('ubuy'),
   },
   {
     id: 'cv-finder',

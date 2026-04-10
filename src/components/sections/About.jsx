@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
 import { personalInfo, education, achievements, languages } from '../../data';
 import SectionTitle from '../ui/SectionTitle';
+import myAboutImg from '../../assets/aboutimg.png';
+
 
 const stats = [
   { value: '6+', label: 'Years Coding' },
-  { value: '6+', label: 'Projects Built' },
+  { value: '12+', label: 'Projects Built' },
   { value: '40–50%', label: 'Query Speedup' },
   { value: '10+', label: 'Tech Stacks' },
 ];
@@ -16,7 +18,7 @@ export default function About() {
         <SectionTitle label="About Me" title="Who I Am" />
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div className="space-y-6">
+          <div className="space-y-6 grid md:grid-cols-2 lg:grid-cols-1 gap-2">
             <motion.div
               className="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 bg-slate-50 glass shadow-md"
               initial={{ opacity: 0, x: -40 }}
@@ -25,11 +27,8 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <div className="aspect-[4/3] flex flex-col items-center justify-center bg-gradient-to-br from-purple-50 to-cyan-50 dark:from-purple-900/20 dark:to-cyan-900/20">
-                {/* Profile / about image — replace with: <img src="about-image.jpg" alt="Nazmul Sakib" className="w-full h-full object-cover" /> */}
-                <svg className="w-24 h-24 text-purple-200 dark:text-purple-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-                <span className="text-xs text-slate-400 dark:text-slate-600 font-mono mt-2">about / photo here</span>
+                <img src={myAboutImg} alt="Nazmul Sakib" className="w-full h-full object-cover" />
+
               </div>
             </motion.div>
 
