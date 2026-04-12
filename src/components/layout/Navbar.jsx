@@ -98,9 +98,9 @@ export default function Navbar() {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <div className="w-8 h-8 rounded-lg animated-gradient flex items-center justify-center text-white font-bold text-sm shadow-lg group-hover:scale-110 transition-transform">
-              N
+              NS
             </div>
-            <span className="font-bold text-slate-900 dark:text-white text-base hidden sm:block">
+            <span className="font-bold text-slate-900 dark:text-white text-base ">
               m_n_sakib
             </span>
           </Link>
