@@ -196,7 +196,7 @@ body {
 .animated-gradient {
         background: linear-gradient(-45deg, var(--color-primary), var(--color-secondary), var(--color-primary-light), var(--color-accent));
         background-size: 400% 400%;
-        animation: gradientShift 8s ease infinite;
+        animation: gradientShift 2s ease infinite;
 }
 
 /* ─── Floating animation ─────────────────────────────────────────────────── */
