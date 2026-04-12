@@ -177,21 +177,17 @@ export const projects = [
     id: 'itweet',
     title: 'ITweet',
     subtitle: 'Social Media Platform',
+    displayImg: getDisplayImage('itweet'),
     shortDesc:
       'Full-featured social platform with posts, likes, comments, hashtags, following, and trending suggestions.',
     longDesc:
-      'Building a full-featured social platform with Posts, Likes, Comments, Hashtags, Following system, Trending Suggestions, and Search functionality. The responsive frontend is built with Bootstrap 5, with plans for Nuxt.js frontend integration for improved performance.',
-    tech: ['Python', 'Django', 'SQLite', 'JavaScript', 'HTML5', 'Bootstrap 5'],
+      'Building a full-featured social platform with Posts, Likes, Comments, Hashtags, Following system, Trending Suggestions, and Search functionality. The responsive frontend is built with Bootstrap 5, vanilla js, custom template making component a like feature in django, used Django orm and django built in authentiction system, custom middleware, built with email verification system.',
+    tech: ['Python', 'Django', 'SQLite', 'vanilla JavaScript', 'HTML5', 'Bootstrap 5', 'SCSS'],
     category: 'Social Media',
     badge: 'In Progress',
     liveLink: '',
     githubLink: 'https://github.com/m-n-sakib-dev/itweet/',
-    screenshots: [
-      // Feed / home timeline screenshot
-      // Post detail with comments screenshot
-      // User profile page screenshot
-      // Search / trending hashtags screenshot
-    ],
+    screenshots: getProjectScreenshots('itweet'),
   },
   {
     id: 'exam-platform',
