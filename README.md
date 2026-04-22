@@ -1,16 +1,41 @@
-# React + Vite
+# 🚀 Professional Portfolio | Nazmul Sakib
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance, visually engaging portfolio website built to showcase my journey as a **Full-Stack Software Engineer**. This site features smooth motion effects, a mobile-first responsive design, and a comprehensive breakdown of my production-level experience and projects.
 
-Currently, two official plugins are available:
+## 🛠️ Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Frontend:** React.js
+- **Styling:** Tailwind CSS (Modern UI/UX standards)
+- **Animations:** Framer Motion (Smooth scroll reveals and interactive elements)
+- **Deployment:** [m_n_sakib]( https://m-n-sakib-dev.github.io/ )
 
-## React Compiler
+## ✨ Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Interactive Experience:** Smooth, physics-based animations using **Framer Motion**.
+- **Dynamic Project Showcase:** Categorized view of production work, personal experiments, and live apps.
+- **Skills Matrix:** A visual breakdown of technical expertise across 5+ languages and 10+ tech stacks.
+- **Optimized Performance:** Fast load times with clean, component-based React architecture.
+- **Professional Highlights:** Showcases specific engineering achievements like **40-50% query speedup** and **CI/CD automation**.
 
-## Expanding the ESLint configuration
+## 📖 Portfolio Sections
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Hero:** Quick intro highlighting my B.Sc. in CS from **CUET** and core engineering philosophy.
+- **About:** Deep dive into my coding experience (6+ years) and internship at **BD Funnel Builder**.
+- **Skills:** Detailed technical expertise (Frontend, Backend, Databases, DevOps).
+- **Experience:** Interactive timeline of my professional journey from **Jr. Software Engineer** to early internships.
+- **Projects:** A gallery of work including **Odommopress**, **Fill Blog**, and the **Web Quran App**.
+
+## 🚀 Engineering Philosophy
+
+> "Passionate about clean architecture and shipping fast with AI-assisted workflows."
+
+This portfolio reflects my ability to bridge the gap between complex backend logic (Laravel/FastAPI/Node) and seamless frontend experiences (React/Next/Nuxt).
+
+## 📥 Contact Me
+
+- **Email:** mdsakib.ndc17@gmail.com
+- **LinkedIn:** [Nazmul Sakib](https://www.linkedin.com/in/md-nazmul-sakib-064923174/)
+- **Location:** Dhaka, Bangladesh
+
+---
+Designed and Developed by **Nazmul Sakib** © 2026

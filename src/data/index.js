@@ -83,10 +83,22 @@ export const skillGroups = [
 export const experiences = [
   {
     id: 1,
+    role: 'Jr. Software Engineer',
+    company: 'BD Funnel Builder',
+    period: 'April 2026 – Present',
+    type: 'current',
+    bullets: [
+        'Built a archive server for the main SAAS project BD Funnel Builder and deployed it on Digital Ocean',
+        'Made automated archive on custom date by superadmin using Laravel Console app',
+        'Build a staging server on digital ocean for as a backup server of main',
+      ],
+  },
+  {
+    id: 2,
     role: 'Software Engineer Intern',
     company: 'BD Funnel Builder',
-    period: 'Jan 2026 – Present',
-    type: 'current',
+    period: 'Jan 2026 – April 2026',
+    type: 'past',
     bullets: [
       'Implemented CI/CD pipeline on self-hosted Ubuntu server using GitHub Actions — automated deployment, process auto-restart on deploy, achieved zero-touch deployment on git push.',
       'Built and shipped front-end features for an e-commerce platform using Nuxt.js under tight deadlines.',
@@ -97,7 +109,7 @@ export const experiences = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     role: 'Business Lead (Family Business)',
     company: 'Molla Rent a Car, Dhaka',
     period: 'Feb 2024 – Dec 2025',
@@ -111,7 +123,7 @@ export const experiences = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     role: 'Software Developer',
     company: 'Bright Tutors, Chittagong',
     period: 'Jun 2023 – Dec 2023',
@@ -126,7 +138,7 @@ export const experiences = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     role: 'Industrial Attachment',
     company: 'New Vision IT Ltd., Chittagong',
     period: 'Oct 2022 – Dec 2022',
@@ -226,23 +238,22 @@ export const projects = [
     screenshots: getProjectScreenshots('ubuy'),
   },
   {
-    id: 'cv-finder',
-    title: 'CV Finder',
-    subtitle: 'Automated CV Screening Tool',
+    id: 'web_quran',
+    title: 'WEB Quran',
+    subtitle: 'A online Quran reading app with translation ',
+    displayImg: getDisplayImage('web_quran'),
     shortDesc:
-      'Automated CV parsing and screening with custom scoring algorithms, MySQL storage, and Tkinter GUI.',
+      'A high-performance, full-stack Quranic application built with Next.js 15, Express.js, and MySQL. It leverages SSG for instant page loads and Zustand for persistent UI customization—featuring interactive sliders to precisely adjust Arabic and translation font sizes, alongside typography and theme controls.',
     longDesc:
-      'Built an automated CV parsing and screening tool with custom scoring algorithms that match candidates to job requirements. Designed a MySQL database for CV storage and retrieval, and built a Tkinter GUI to make the tool accessible for non-technical HR users.',
-    tech: ['Python', 'MySQL', 'Tkinter', 'Data Analysis'],
-    category: 'AI / Data Tool',
-    badge: 'Desktop App',
-    liveLink: '',
-    githubLink: '',
-    screenshots: [
-      // Main application window screenshot
-      // CV upload / screening results screenshot
-      // Score breakdown / analytics screenshot
-    ],
+        'Web Quran App is a professional-grade full-stack platform designed for a seamless reading experience. Built with a focus on performance and accessibility, the application utilizes Next.js 15\'s App Router and Static Site Generation (SSG) to ensure that Quranic data is pre-rendered for lightning-fast speeds and optimal SEO. \n' +
+        'On the backend, a managed Express.js API interacts with a MySQL database hosted on Aiven, utilizing connection pooling for efficient data fetching. One of the project\'s standout features is its sophisticated user customization engine; integrated with Zustand, the app allows users to adjust Arabic font styles (Amiri/Noto Naskh) and text sizes in real-time, with all preferences persisting across sessions via localStorage.\n' +
+        'The UI is built using the latest Tailwind CSS v4 and DaisyUI, offering a fully responsive, mobile-first design that supports both dark and light modes. This project demonstrates my ability to manage a full-stack monorepo, implement advanced state management, and deploy scalable serverless functions on Vercel.',
+    tech: ['Express','Node Js','MySql','React','Zustand','Tailwind','Vercel','Serverless Deployment'],
+    category: 'Full-Stack',
+    badge: 'Live',
+    liveLink: 'https://web-quran-one.vercel.app/',
+    githubLink: 'https://github.com/m-n-sakib-dev/web-quran',
+    screenshots: getProjectScreenshots('web_quran'),
   },
 ];
 
