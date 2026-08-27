@@ -8,7 +8,7 @@ export const personalInfo = {
   github: 'https://github.com/m-n-sakib-dev',
   linkedin: 'https://linkedin.com/in/md-nazmul-sakib',
   profile:
-    'Full-Stack Software Engineer with a B.Sc. in Computer Science from CUET. Recently completed an internship at BD Funnel Builder where I consistently delivered production-level work on par with junior developers — optimizing query performance by 40–50% on a large SaaS platform, building and deploying full-stack features, and integrating AI-powered workflows for faster delivery. Proficient across the full stack: Vue/Nuxt/React/Next on the frontend and Laravel/Django/FastAPI/Node on the backend. Passionate about clean architecture, RESTful API design, and leveraging AI tools to ship high-quality software faster.',
+    'Full-Stack Software Engineer with a B.Sc. in Computer Science from CUET, currently building a multi-tenant SaaS e-commerce platform at BD Funnel Builder. Re-architected the platform onto a PostgreSQL schema-per-tenant model with request-time tenant isolation, JWT / RBAC auth and audit logging, deployed on Kubernetes with autoscaling. Shipped multi-vendor payment (SSLCommerz, bKash, aamarPay, SurjoPay), courier and SMS integrations plus a queue-driven, multi-channel notification system with real-time WebSocket delivery — and cut key dashboard response times 40–50% through raw-SQL tuning, indexing and Redis caching. Proficient across the full stack: Vue/Nuxt/React/Next on the frontend and Laravel/Django/FastAPI/Node on the backend. Passionate about clean architecture, RESTful API design, and leveraging AI tools to ship high-quality software faster.',
 };
 
 export const skillGroups = [
@@ -83,14 +83,18 @@ export const skillGroups = [
 export const experiences = [
   {
     id: 1,
-    role: 'Jr. Software Engineer',
+    role: 'Software Engineer',
     company: 'BD Funnel Builder',
     period: 'April 2026 – Present',
     type: 'current',
     bullets: [
-        'Built a archive server for the main SAAS project BD Funnel Builder and deployed it on Digital Ocean',
-        'Made automated archive on custom date by superadmin using Laravel Console app',
-        'Build a staging server on digital ocean for as a backup server of main',
+        'Re-architected the company\'s multi-tenant SaaS e-commerce / funnel platform (Laravel + Nuxt.js) onto a PostgreSQL schema-per-tenant model with request-time search_path isolation — each tenant gets a fully isolated schema behind shared auth, enforced by tenant-resolution middleware, JWT auth, and role / membership-based access control.',
+        'Automated tenant provisioning end to end (schema creation, per-tenant migrations, seeding, DNS) and horizontal scaling on Kubernetes with autoscaling.',
+        'Integrated four Bangladeshi payment gateways — SSLCommerz, bKash, aamarPay, and SurjoPay — behind a single unified payment abstraction with webhook-based verification, idempotent transaction handling, and automatic reconciliation of pending or failed payments.',
+        'Built a multi-channel notification system delivering transactional SMS, email, and real-time in-app notifications over WebSockets, all fanned out through queue-based background workers with retry and delivery-failure tracking.',
+        'Integrated multi-vendor courier services (Pathao, RedX, SteadFast, PaperFly) with queue-driven workers powering automated order-processing and fulfilment workflows.',
+        'Added automatic audit / activity logging across tenant models; standardized API response format, error handling, and transactional rollback.',
+        'Built a read-only archive server for the main SaaS with automated, superadmin-scheduled database archiving (Laravel Console + Python / Linux cron), using a local export queue tuned to a 2 GB RAM budget — deployed on DigitalOcean alongside a staging backup server.',
       ],
   },
   {
@@ -102,7 +106,7 @@ export const experiences = [
     bullets: [
       'Implemented CI/CD pipeline on self-hosted Ubuntu server using GitHub Actions — automated deployment, process auto-restart on deploy, achieved zero-touch deployment on git push.',
       'Built and shipped front-end features for an e-commerce platform using Nuxt.js under tight deadlines.',
-      'Query optimized the company\'s main SaaS (Laravel Filament) achieving 40–50% speed improvement on dashboard and orders pages, measured via debugger tooling.',
+      'Query-optimized the company\'s main SaaS (Laravel Filament) — raw-SQL tuning, PostgreSQL indexing, and Redis caching with targeted invalidation — achieving 40–50% faster dashboard and orders pages, measured via debugger tooling.',
       'Developed a full-stack task management system in Laravel with Sanctum auth, role-based permissions, middleware, caching, queues, observers, and RESTful CRUD APIs.',
       'Architected FastAPI microservice for AI-powered CV analysis (GenAI) and integrated with Laravel Filament CV analyzer app — delivering the complete solution in a single day.',
       'Applied AI-assisted development (ChatGPT/Gemini/Claude) for code generation — significantly reducing delivery time on production features.',
