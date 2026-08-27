@@ -13,7 +13,7 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="about" className="section-padding bg-white dark:bg-transparent">
+    <section id="about" className="section-padding bg-[#6b4f2a]/[0.06] border-y border-[#6b4f2a]/15 dark:bg-transparent dark:border-white/5">
       <div className="container-main">
         <SectionTitle label="About Me" title="Who I Am" />
 

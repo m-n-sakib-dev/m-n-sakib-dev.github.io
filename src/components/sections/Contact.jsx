@@ -38,7 +38,7 @@ const contactItems = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="section-padding bg-slate-50 dark:bg-transparent">
+    <section id="contact" className="section-padding bg-[#6b4f2a]/[0.06] border-y border-[#6b4f2a]/15 dark:bg-transparent dark:border-white/5">
       <div className="container-main">
         <SectionTitle
           label="Contact"

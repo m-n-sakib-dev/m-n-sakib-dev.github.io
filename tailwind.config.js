@@ -11,6 +11,9 @@ export default {
         tertiary: 'var(--color-tertiary)',
         accent: 'var(--color-accent)',
 
+        /* warm off-white — replaces stark #fff so light mode reads as paper */
+        white: '#faf7ee',
+
         /* Terminal theme: every legacy `purple-*` / `violet-*` utility becomes
            amber "phosphor"; every legacy `cyan-*` becomes terminal green. */
         purple: {
@@ -51,6 +54,22 @@ export default {
           800: '#175e26',
           900: '#123f1c',
           950: '#08260f',
+        },
+
+        /* warm sepia neutral ramp — replaces cool `slate`, unifies both themes.
+           50-200 are paper tints; 300-900 are warm greys for text & surfaces. */
+        slate: {
+          50: '#f0e9d9',
+          100: '#e7dcc6',
+          200: '#cdbc93',
+          300: '#c7bda6',
+          400: '#a49a84',
+          500: '#7c7460',
+          600: '#5b5442',
+          700: '#423c2e',
+          800: '#2c2719',
+          900: '#1b1710',
+          950: '#0b0906',
         },
       },
       maxWidth: {
