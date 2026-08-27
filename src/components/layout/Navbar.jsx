@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from '../../context/ThemeContext';
 import { navLinks } from '../../data';
+import Logo from '../ui/Logo';
 
 function SunIcon() {
   return (
@@ -97,9 +98,7 @@ export default function Navbar() {
             className="flex items-center gap-2 group"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <div className="w-8 h-8 flex items-center justify-center border border-primary text-primary font-bold text-sm group-hover:bg-primary group-hover:text-black transition-colors">
-              NS
-            </div>
+            <Logo size={32} className="shrink-0 group-hover:opacity-80 transition-opacity" />
             <span className="font-bold text-slate-900 dark:text-white text-sm">
               ~/sakib
             </span>

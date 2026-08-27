@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { personalInfo } from '../../data';
+import Logo from '../ui/Logo';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -9,9 +10,7 @@ export default function Footer() {
       <div className="container-main py-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-lg animated-gradient flex items-center justify-center text-white font-bold text-xs">
-              N
-            </div>
+            <Logo size={28} className="shrink-0" />
             <span className="font-semibold text-slate-800 dark:text-white text-sm">
               MD. Nazmul Sakib
             </span>
