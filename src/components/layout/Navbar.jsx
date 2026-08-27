@@ -83,7 +83,7 @@ export default function Navbar() {
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/80 dark:bg-black/40 backdrop-blur-xl shadow-lg dark:shadow-black/20 border-b border-slate-200/60 dark:border-white/8'
+          ? 'bg-[#f2f0e9]/90 dark:bg-[#0a0a0a]/90 backdrop-blur border-b border-slate-300 dark:border-white/10'
           : 'bg-transparent'
       }`}
       initial={{ y: -80 }}
@@ -97,11 +97,11 @@ export default function Navbar() {
             className="flex items-center gap-2 group"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <div className="w-8 h-8 rounded-lg animated-gradient flex items-center justify-center text-white font-bold text-sm shadow-lg group-hover:scale-110 transition-transform">
+            <div className="w-8 h-8 flex items-center justify-center border border-primary text-primary font-bold text-sm group-hover:bg-primary group-hover:text-black transition-colors">
               NS
             </div>
-            <span className="font-bold text-slate-900 dark:text-white text-base ">
-              m_n_sakib
+            <span className="font-bold text-slate-900 dark:text-white text-sm">
+              ~/sakib
             </span>
           </Link>
 
@@ -113,16 +113,16 @@ export default function Navbar() {
                 <button
                   key={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className={`relative px-3 py-1.5 text-sm font-medium rounded-lg transition-colors duration-200 ${
+                  className={`relative px-3 py-1.5 text-[13px] lowercase tracking-wide transition-colors duration-200 ${
                     isActive
-                      ? 'text-purple-600 dark:text-purple-400'
+                      ? 'text-primary'
                       : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                   }`}
                 >
                   {isActive && (
                     <motion.span
                       layoutId="activeNav"
-                      className="absolute inset-0 rounded-lg bg-purple-100 dark:bg-purple-500/15"
+                      className="absolute left-2 right-2 -bottom-0.5 h-px bg-primary"
                       transition={{ type: 'spring', duration: 0.4 }}
                     />
                   )}
@@ -167,7 +167,7 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            className="md:hidden border-t border-slate-200/60 dark:border-white/8 bg-white/95 dark:bg-black/70 backdrop-blur-xl"
+            className="md:hidden border-t border-slate-300 dark:border-white/10 bg-[#f2f0e9] dark:bg-[#0a0a0a]"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -181,10 +181,10 @@ export default function Navbar() {
                   <button
                     key={link.href}
                     onClick={() => handleNavClick(link.href)}
-                    className={`text-left px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                    className={`text-left px-4 py-2.5 text-[13px] lowercase tracking-wide border-l-2 transition-colors ${
                       isActive
-                        ? 'bg-purple-100 dark:bg-purple-500/15 text-purple-600 dark:text-purple-400'
-                        : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/8'
+                        ? 'border-primary text-primary'
+                        : 'border-transparent text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/8'
                     }`}
                   >
                     {link.label}

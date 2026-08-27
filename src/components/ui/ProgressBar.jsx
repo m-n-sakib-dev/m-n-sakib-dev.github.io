@@ -1,29 +1,28 @@
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
+
+const CELLS = 14;
 
 export default function ProgressBar({ name, level }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: false, amount: 0.5 });
+  const filled = Math.round((level / 100) * CELLS);
+  const bar = '█'.repeat(filled) + '░'.repeat(Math.max(0, CELLS - filled));
 
   return (
-    <div ref={ref} className="mb-4">
-      <div className="flex justify-between items-center mb-1.5">
-        <span className="text-sm font-medium text-slate-700 dark:text-slate-300">{name}</span>
-        <span className="text-xs font-mono font-semibold text-purple-600 dark:text-purple-400">
-          {level}%
-        </span>
-      </div>
-      <div className="h-2 w-full rounded-full bg-slate-200 dark:bg-white/10 overflow-hidden">
-        <motion.div
-          className="h-full rounded-full"
-          style={{
-            background: 'linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%)',
-          }}
-          initial={{ width: 0 }}
-          animate={inView ? { width: `${level}%` } : { width: 0 }}
-          transition={{ duration: 1, ease: 'easeOut', delay: 0.1 }}
-        />
-      </div>
-    </div>
+    <motion.div
+      className="mb-2.5 flex items-center gap-3 text-[13px] leading-none"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: false, amount: 0.6 }}
+      transition={{ duration: 0.25 }}
+    >
+      <span className="w-32 sm:w-40 shrink-0 truncate text-slate-600 dark:text-slate-300">
+        {name}
+      </span>
+      <span className="text-primary tracking-[-0.5px] select-none" aria-hidden="true">
+        {bar}
+      </span>
+      <span className="ml-auto tabular-nums text-slate-400 dark:text-slate-500">
+        {String(level).padStart(3, ' ')}%
+      </span>
+    </motion.div>
   );
 }
